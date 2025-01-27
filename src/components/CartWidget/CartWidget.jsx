@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../assets/Carrito.jpg'
+import img from '/img/Carrito.jpg'
 import './CartWidget.css'
 const CartWidget = () => {
     const imgCarrito = img; // de esta manera se le asigna la imagen a la constante imgCarrito

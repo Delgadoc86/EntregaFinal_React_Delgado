@@ -1,0 +1,67 @@
+/* Estilo general para el contenedor */
+.itemCountContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 300px;
+    
+}
+
+
+/* Contenedor de los controles de cantidad */
+.contadorControls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.btnControl {
+    background-color: #F1F3F4;
+    border: 1px solid #BDC3C7;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnControl:hover {
+    background-color: #D4D8DB;
+    transform: scale(1.1);
+}
+
+.contadorValue {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 10px;
+    color: #333;
+}
+
+.stockInfo {
+    font-size: 14px;
+    color: #7F8C8D;
+    margin-bottom: 16px;
+}
+
+/* Botón para agregar al carrito */
+.addToCartBtn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(245deg , #aa95f7, #664caf);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.addToCartBtn:hover {
+    background: linear-gradient(35deg , #aa95f7, #664caf);
+    transform: scale(1.01);
+}

@@ -1,0 +1,14 @@
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual tamaño */
+    gap: 16px; /* Espacio entre los elementos */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .lista-productos > * {
+    border: 1px solid #ccc; /* Si deseas agregar bordes a cada producto */
+    padding: 10px; /* Espacio dentro de cada producto */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  

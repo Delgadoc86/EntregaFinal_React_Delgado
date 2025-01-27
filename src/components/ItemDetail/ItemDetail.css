@@ -1,0 +1,78 @@
+/* ItemDetail.css */
+.itemDetailContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.itemImageWrapper {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.itemImage {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.itemInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.itemPrice {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.priceValue {
+  font-weight: bold;
+  color: #222222;
+}
+
+.itemId {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.itemDescription {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: linear-gradient(245deg , #aa95f7, #664caf);
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(35deg , #aa95f7, #664caf);
+}
+
+.itemCountWrapper {
+  margin-top: 20px;
+}
