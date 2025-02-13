@@ -16,14 +16,13 @@
 - **Catálogo Dinámico**: Productos organizados por categorías.
 - **Sistema de Carrito de Compras**: Permite a los usuarios agregar y eliminar productos.
 - **Checkout Integrado**: Procesa pedidos y registra la información en Firebase.
-- **Autenticación y Seguridad**: Protección de datos de usuario.
 - **Diseño Responsivo**: Compatible con dispositivos móviles y de escritorio.
 
 ## 🛠 Instalación y Ejecución
 
 1. Clonar el repositorio (si tienes acceso autorizado):
    ```sh
-   git clone [URL_DEL_REPOSITORIO]
+   git clone https://github.com/Delgadoc86/EntregaFinal_React_Delgado.git
    ```
 2. Instalar dependencias:
    ```sh
