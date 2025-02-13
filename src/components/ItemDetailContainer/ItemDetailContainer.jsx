@@ -1,6 +1,7 @@
-import { getUnProducto } from "../../asyncmock";
 import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { getDoc, doc } from 'firebase/firestore';
+import { db } from "../../services/Config";
 
 
 // se usa useParams en este caso para 
@@ -9,22 +10,30 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState(null); 
+    const [producto, setProducto] = useState(null);
 
     //Me guardo el idItem: 
     const { idItem } = useParams();
-
-    useEffect( () => {
-        getUnProducto(idItem)
-            .then(respuesta => setProducto(respuesta))
-            
+    // modificamos para trabajar con firebase
+    useEffect(() => {
+        const nuevoDoc = doc(db, "productos", idItem);
+        getDoc(nuevoDoc)
+            .then(respuestaDoc => {
+                const data = respuestaDoc.data();
+                const nuevoProducto = {id: respuestaDoc.id, ...data}
+                setProducto(nuevoProducto);
+            })
+            .catch(error => {
+                console.log("Error getting document:", error);
+            });
     }, [idItem])
 
-  return (
-    <div >
-        <ItemDetail {...producto} />
-    </div>
-  )
+
+    return (
+        <div >
+            <ItemDetail {...producto} />
+        </div>
+    )
 }
 
 export default ItemDetailContainer

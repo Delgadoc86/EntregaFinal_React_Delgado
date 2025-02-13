@@ -1,0 +1,146 @@
+.cart-container {
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.cart-title {
+  font-size: 3rem;
+  background: linear-gradient(35deg ,#664caf , #cac0ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.cart-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #333;
+}
+
+.cart-empty {
+
+  text-align: center;
+  padding: 2rem;
+  margin: 5rem auto;
+  max-width: 600px;
+}
+
+.cart-empty p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-empty-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(35deg , #cac0ee, #664caf 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-empty-link:hover {
+  background: linear-gradient(235deg , #cac0ee, #664caf 100%);
+}
+
+.cart-divider {
+  margin: 2rem 0;
+  border: none;
+  border-top: 2px solid transparent;
+  background: linear-gradient(to right, #7500c4, rgba(117, 0, 196, 0));
+  height: 2px;
+}
+
+
+.cart-total,
+.cart-quantity {
+  text-align: right;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cart-clear,
+.cart-checkout {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cart-clear {
+  background-color: #ff4444;
+  color: white;
+}
+
+.cart-clear:hover {
+  background-color: #ff6666;
+}
+
+.cart-checkout {
+  text-align: center;
+  background: linear-gradient(35deg , #cac0ee, #664caf 100%);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cart-checkout:hover {
+  background:linear-gradient(235deg , #cac0ee, #664caf 100%);
+  color: white;
+  text-decoration: none;
+
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 15px;
+  }
+
+  .cart-title {
+    font-size: 2.5rem;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .cart-title {
+    font-size: 2rem;
+  }
+
+  .cart-container {
+    padding: 10px;
+  }
+
+  .cart-total,
+  .cart-quantity {
+    font-size: 1.1rem;
+  }
+}

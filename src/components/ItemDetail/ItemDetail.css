@@ -8,6 +8,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  margin-top: 100px; /* Asegura espacio debajo del navbar */
 }
 
 .itemImageWrapper {
@@ -57,22 +58,159 @@
   line-height: 1.5;
 }
 
-.ctaButton {
+/* Contenedor de botones */
+.ctaButtonContainer {
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  gap: 15px; /* Espacio entre botones */
+  margin-top: 20px;
+}
+
+/* Estilos generales para botones */
+.ctaButton,
+.ctaButton-catalogo {
   display: inline-block;
-  background: linear-gradient(245deg , #aa95f7, #664caf);
-  color: white;
-  padding: 12px 24px;
+  padding: 10px 18px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  min-width: 140px; /* Para que no sean demasiado pequeños */
+  max-width: 180px; /* Para evitar botones muy anchos */
+  white-space: nowrap; /* Evita que el texto se desborde */
+}
+
+/* Botón principal */
+.ctaButton {
+  background: linear-gradient(245deg, #aa95f7, #664caf);
+  color: white;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
 }
 
 .ctaButton:hover {
-  background: linear-gradient(35deg , #aa95f7, #664caf);
+  background: linear-gradient(35deg, #aa95f7, #664caf);
+  border-color: #664caf;
+}
+
+/* Botón "Volver al catálogo" */
+.ctaButton-catalogo {
+  background: linear-gradient(245deg, #f79595, #af4c4c);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.ctaButton-catalogo:hover {
+  background: linear-gradient(35deg, #f79595, #af4c4c);
+  border-color: #af4c4c;
 }
 
 .itemCountWrapper {
   margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .itemDetailContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-top: 120px;
+  }
+
+  .itemImageWrapper {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .itemImage {
+    max-width: 80%;
+  }
+
+  .itemInfo {
+    flex: none;
+    width: 100%;
+  }
+
+  .itemTitle {
+    font-size: 1.8rem;
+  }
+
+  .itemPrice {
+    font-size: 1.3rem;
+  }
+
+  .itemDescription {
+    font-size: 0.95rem;
+  }
+
+  .ctaButtonContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .itemDetailContainer {
+    margin-top: 120px;
+  }
+  .itemTitle {
+    font-size: 1.5rem;
+  }
+
+  .itemPrice {
+    font-size: 1.2rem;
+  }
+
+  .itemDescription {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton,
+  .ctaButton-catalogo {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    min-width: 130px;
+    max-width: 160px;
+  }
+
+  .ctaButtonContainer {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .itemDetailContainer {
+    margin: 15px;
+    padding: 10px;
+    margin-top: 120px;
+  }
+
+  .itemTitle {
+    font-size: 1.3rem;
+  }
+
+  .itemPrice {
+    font-size: 1rem;
+  }
+
+  .itemDescription {
+    font-size: 0.85rem;
+  }
+
+  .ctaButton,
+  .ctaButton-catalogo {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    min-width: 120px;
+    max-width: 140px;
+  }
+
+  .ctaButtonContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 }

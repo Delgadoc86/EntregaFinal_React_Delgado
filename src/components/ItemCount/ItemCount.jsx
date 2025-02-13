@@ -7,7 +7,7 @@ const ItemCount = ({ inicial, stock, funcionAgregar }) => {
     // Funciones auxiliares: 
     const sumarContador = () => {
         if (contador < stock) {
-            setContador(contador + 1); 
+            setContador(contador + 1);
         }
     }
 

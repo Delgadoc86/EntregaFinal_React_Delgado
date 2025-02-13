@@ -7,18 +7,35 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencias
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Builds y caché
+dist/
+dist-ssr/
+.vite/
+.cache/
+
+# Variables de entorno
+.env
+
+# Archivos de configuración del sistema
 .DS_Store
+Thumbs.db
+
+# Configuración del editor
+.vscode/
+!.vscode/extensions.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase
+firebase-debug.log
+firebase-debug.*

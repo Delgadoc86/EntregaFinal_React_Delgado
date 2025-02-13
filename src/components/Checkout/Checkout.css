@@ -1,0 +1,117 @@
+.checkout-container {
+  max-width: 800px;
+  margin: 7rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .checkout-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(35deg, #664caf, #cac0ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+ }
+ 
+ .checkout-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+ }
+ 
+ .checkout-container form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+ }
+ 
+ .checkout-container input {
+  width: 90%;
+  padding: 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+ }
+ 
+ .checkout-container input:focus {
+  outline: none;
+  border-color: #664caf;
+  box-shadow: 0 0 0 3px rgba(102, 76, 175, 0.1);
+ }
+ 
+ .checkout-container input::placeholder {
+  color: #999;
+ }
+ 
+ .checkout-container button {
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(35deg, #664caf, #cac0ee);
+  color: white;
+  border: none;
+  margin-top: 1rem;
+ }
+ 
+ .checkout-container button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(102, 76, 175, 0.3);
+ }
+ 
+ .checkout-container p {
+  margin: 0.5rem 0;
+  color: #666;
+ }
+ 
+ /* Estilos para los productos en el checkout */
+ .checkout-container > form > div:first-of-type {
+  background: rgba(102, 76, 175, 0.05);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+ }
+ 
+ /* Estilo para mensajes de error */
+ .checkout-container form > p {
+  color: #ff4444;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+ }
+ 
+ /* Estilo para el mensaje de éxito */
+ .checkout-container form > p:last-child {
+  color: #28a745;
+  background: rgba(40, 167, 69, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+ }
+ 
+ @media (max-width: 768px) {
+  .checkout-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+ 
+  .checkout-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .checkout-container input {
+    padding: 0.75rem;
+  }
+ 
+  .checkout-container button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+ }

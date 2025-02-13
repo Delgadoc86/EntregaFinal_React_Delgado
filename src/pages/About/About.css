@@ -1,0 +1,137 @@
+/* Contenedor principal, responsivo y profesional */
+.about-container {
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  color: white;
+  padding: 2rem 1rem; /* Padding para móviles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  margin-top: 80px; /* Para evitar que se solape con el navbar */
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Apilado vertical en móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.about-text h1 {
+  font-size: 2rem; /* Adaptado para móviles */
+  background: linear-gradient(35deg, #cac0ee, #664caf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text p {
+  font-size: 1rem; /* Texto más pequeño en móviles */
+  margin-top: 1rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column; /* Columna en móviles */
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 200px; /* Limitar el tamaño de los iconos */
+}
+
+.icon-box:hover {
+  transform: scale(1.1);
+  background: linear-gradient(35deg, #cac0ee, #664caf 100%);
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px; /* Controlamos el tamaño de la imagen */
+  border-radius: 10px;
+  object-fit: cover; /* Aseguramos que la imagen se ajuste sin deformarse */
+}
+
+/* Medios para pantallas de tablet y mayores (768px y más) */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row; /* Cambiar a fila en pantallas más grandes */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .about-text {
+    text-align: left;
+    max-width: 50%; /* Para que ocupe la mitad del espacio */
+  }
+
+  .about-image {
+    max-width: 50%;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem; /* Aumento del tamaño en pantallas grandes */
+  }
+
+  .about-text p {
+    font-size: 1.2rem; /* Ajustamos el tamaño de texto */
+  }
+
+  .icons {
+    flex-direction: row; /* Disposición en fila */
+    justify-content: flex-start;
+  }
+
+  .icon-box {
+    width: auto; /* Iconos con tamaño flexible */
+  }
+
+  .about-image img {
+    max-width: 400px; /* Aumentamos el tamaño de la imagen en pantallas grandes */
+  }
+}
+
+/* Medios para pantallas más grandes (1024px y más) */
+@media (min-width: 1024px) {
+  .about-container {
+    padding: 4rem 2rem; /* Mayor padding para pantallas grandes */
+  }
+
+  .about-text h1 {
+    font-size: 3rem;
+  }
+
+  .about-text p {
+    font-size: 1.4rem;
+  }
+
+  .about-image img {
+    max-width: 500px; /* Aumentamos aún más el tamaño de la imagen */
+  }
+}

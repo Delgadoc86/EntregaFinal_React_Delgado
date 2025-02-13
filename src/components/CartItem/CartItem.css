@@ -1,0 +1,113 @@
+.cart-item {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    box-shadow: 0 2px 8px rgba(67, 2, 141, 0.2);
+}
+
+.cart-item__content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.cart-item__info {
+    flex: 1;
+}
+
+.cart-item__title {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.cart-item__id {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.cart-item__details {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.cart-item__quantity,
+.cart-item__price,
+.cart-item__subtotal {
+    margin: 0;
+    color: #333;
+}
+
+.cart-item__quantity span,
+.cart-item__price span,
+.cart-item__subtotal span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cart-item__remove {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.cart-item__remove:hover {
+    background-color: #ff6666;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .cart-item__content {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .cart-item__details {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .cart-item__remove {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item__title {
+        font-size: 1.1rem;
+    }
+
+    .cart-item {
+        padding: 0.75rem;
+    }
+}

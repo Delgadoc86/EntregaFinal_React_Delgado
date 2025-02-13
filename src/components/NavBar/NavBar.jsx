@@ -1,30 +1,66 @@
-import React from 'react'
-import './NavBar.css'
+import React, { useState } from 'react';
+import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import {Link, NavLink} from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
+
   return (
     <header>
-       <Link to="/">
-       <h2>ModoUrban online</h2>
-       </Link>
-        <nav>
-           
-            <ul>
+      <div className="navbar-container">
+        <Link to="/" className="logo">
+          <h2>ModoUrban</h2>
+        </Link>
 
-                <li><NavLink to='/category/Remera' >Remeras</NavLink></li>
-                <li><NavLink to='/category/Jean' >Jean</NavLink></li>
-                <li><NavLink to='/category/Bermuda' >Bermudas</NavLink></li>
-                <li><NavLink to='/category/Zapatillas' >Zapatillas</NavLink></li>
+        {/* Navegación */}
+        <nav className={menuOpen ? 'active' : ''}>
+          {menuOpen && (
+            <button className="close-btn" onClick={closeMenu}>
+              <span>✖</span>
+            </button>
+          )}
+          <ul className="nav-links">
+            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/about" onClick={closeMenu}>Nosotros</NavLink></li>
+            <li><NavLink to="/contact" onClick={closeMenu}>Contacto</NavLink></li>
 
-            </ul>
+            {/* Categorías con lista desplegable */}
+            <li className="dropdown">
+              <span onClick={toggleDropdown}>
+                Categorías {dropdownOpen ? '▼' : '▶'}
+              </span>
+              <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+                <li><NavLink to="/category/Remera" onClick={closeMenu}>Remeras</NavLink></li>
+                <li><NavLink to="/category/Jean" onClick={closeMenu}>Jean</NavLink></li>
+                <li><NavLink to="/category/Bermuda" onClick={closeMenu}>Bermudas</NavLink></li>
+                <li><NavLink to="/category/Zapatillas" onClick={closeMenu}>Zapatillas</NavLink></li>
+              </ul>
+            </li>
+          </ul>
         </nav>
-        <div className="cart-widget">
+
+        <div className="nav-right">
+          {/* Icono de hamburguesa */}
+          <button className="hamburger" onClick={toggleMenu}>
+            <span>☰</span>
+          </button>
+
+          <div className="cart-widget">
             <CartWidget />
+          </div>
         </div>
+      </div>
     </header>
-  )
+  );
 }
 
 export default Navbar;

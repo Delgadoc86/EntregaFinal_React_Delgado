@@ -5,9 +5,10 @@ const ItemList = ({ productos }) => {
 
 
     return (
+        
         <div className='lista-productos'>{
             productos.map(producto => <Item key={producto.id} {...producto} />)
-            }
+        }
         </div>
     )
 }
