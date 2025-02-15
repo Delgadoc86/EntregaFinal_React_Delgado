@@ -6,7 +6,6 @@ import { db } from "../../services/Config";
 
 // se usa useParams en este caso para 
 // obtener el id del producto a mostrar. 
-
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
@@ -24,7 +23,7 @@ const ItemDetailContainer = () => {
                 setProducto(nuevoProducto);
             })
             .catch(error => {
-                console.log("Error getting document:", error);
+                console.log("Error al obtener el documento:", error);
             });
     }, [idItem])
 

@@ -21,13 +21,22 @@ const Navbar = () => {
           <h2>ModoUrban</h2>
         </Link>
 
+        {/* Botón de hamburguesa, solo se muestra si el menú está cerrado */}
+        {!menuOpen && (
+          <button className="hamburger" onClick={toggleMenu}>
+            <span>☰</span>
+          </button>
+        )}
+
         {/* Navegación */}
         <nav className={menuOpen ? 'active' : ''}>
+          {/* Botón de cierre, solo se muestra si el menú está abierto */}
           {menuOpen && (
             <button className="close-btn" onClick={closeMenu}>
               <span>✖</span>
             </button>
           )}
+
           <ul className="nav-links">
             <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={closeMenu}>Nosotros</NavLink></li>
@@ -49,11 +58,6 @@ const Navbar = () => {
         </nav>
 
         <div className="nav-right">
-          {/* Icono de hamburguesa */}
-          <button className="hamburger" onClick={toggleMenu}>
-            <span>☰</span>
-          </button>
-
           <div className="cart-widget">
             <CartWidget />
           </div>
