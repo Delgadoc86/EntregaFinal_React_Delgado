@@ -21,7 +21,6 @@
 ## Configuración de enrutamiento para despliegue en Vercel  
 El archivo `vercel.json` configura las reglas de enrutamiento en Vercel, asegurando que todas las rutas sean manejadas por React Router en una aplicación SPA.
 
-
 ## 🛠 Instalación y Ejecución
 
 1. Clonar el repositorio (si tienes acceso autorizado):
